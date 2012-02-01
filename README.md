@@ -4,21 +4,25 @@ weibo.js
 
 Usage
 
----------
-<h3>Init a matador based application</h3>
+<h3>Install Matador and Initialize a matador based application</h3>
 
 ``` bash
+npm install -g matador
 matador init matador-app
 cd matador-app
+npm install matador weibo-js
 ```
 
----------
 <h3>Register weibo middleware in ./server.js</h3>
 
 ``` js
+app.use(matador.session({secret: 'key'}))
 app.use(require('weibo-js').middleware({
   appId : 'appId',
-  secret : 'appSecret'
+  secret : 'appSecret',
+  loginUrl: '/auth/login',
+  logoutUrl: '/auth/logout',
+  callbackUrl: '/auth/callback'
 }))
 ```
 

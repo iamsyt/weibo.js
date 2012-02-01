@@ -1,8 +1,9 @@
 {
   "author": "Yonggao Pan <pan.yonggao@qq.com>",
   "name": "weibo-js",
-  "description": "NodeJS library for weibo.com api",
+  "description": "Matador compliant library for weibo.com api",
   "version": "0.1.0",
+  "keywords": "matador weibo sdk",
   "repository": {
     "type": "git",
     "url": "https://github.com/yonggao/weibo.js.git"
